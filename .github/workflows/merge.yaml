@@ -1,0 +1,30 @@
+name: Merge and Publish
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  publish:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.x' # Adjust as needed
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build and run tests
+      run: dotnet test
+
+    - name: Build and publish NuGet package
+      run: |
+        dotnet pack -c Release
+        dotnet nuget push ./path/to/your/package/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
