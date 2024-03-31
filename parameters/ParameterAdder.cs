@@ -16,7 +16,6 @@ internal static class ParameterAdder
                 continue;
             }
             command.Parameters.AddWithValue(parameter.Key, parameter.Value);
-
         }
     };
     internal static readonly Action<NpgsqlCommand, Dictionary<string, object>> Simple = (command, parameters) => 
