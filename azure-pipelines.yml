@@ -33,6 +33,8 @@ variables:
   value: outsystems-publish-service-ct-job
 - name: Logging__LogLevel__Npgsql
   value: Debug
+- name: DOTNET_ROLL_FORWARD
+  value: LatestMajor
 
 resources:
   repositories:
@@ -78,11 +80,8 @@ trigger:
 # Do not trigger on PRs
 pr: none
 
-stages:    
+stages:   
 - template: azure-pipeline.yml@OutSystems.CICDPlatform.PhoenixServicePipelineTemplates
-  variables:
-    - name: DOTNET_ROLL_FORWARD
-      value: LatestMajor
   parameters:
     ProjectName: OutSystems.Publish.Service
     IsGitLFS: true
