@@ -19,7 +19,7 @@ jobs:
         dotnet-version: '8.0.x' # Adjust as needed
         
     - name: Pull Docker image
-      run: docker pull docker pull quay.io/tembo/pgmq-pg:latest
+      run: docker pull quay.io/tembo/pgmq-pg:latest
     
     - name: Restore dependencies
       run: dotnet restore
