@@ -18,7 +18,7 @@ public class BaseTest
     [ReadOnly(true)]
     private DockerClient _client;
     
-    [SetUp]
+    [OneTimeSetUp]
     public async Task Setup()
     {
         _client = new DockerClientConfiguration().CreateClient();
@@ -52,7 +52,7 @@ public class BaseTest
         });
     }
 
-    [TearDown]
+    [OneTimeTearDown]
     public async Task TearDown()
     {
         await _client.Containers.StopContainerAsync("postgres", new ContainerStopParameters());
