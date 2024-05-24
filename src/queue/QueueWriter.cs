@@ -14,7 +14,7 @@ public class QueueWriter : IQueueWriter
         CommandConsts.ConnectionString = connectionString!;
         _queue = queue; 
         var query = new Query(CommandConsts.InstallExtension);
-         query.Execute().Wait();
+        Task.Run(() => query.Execute());
     }
     public async Task CreateQueue(string q, bool unLogged = false)
     {
