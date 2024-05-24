@@ -2,7 +2,7 @@
 
 namespace PGMQ.NET.Models;
 
-public class PGMQModel<T>
+public record PGMQModel<T>
 {
     public BigInteger MessageId { get; init; }
     public T? Message { get; init; }

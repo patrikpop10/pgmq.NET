@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pgmq.NET", "src\pgmq.NET.csproj", "{5BF2124B-9895-4D6D-9E8B-8FE3BEE15BCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pgmq.NET.ComponentTests", "test\pgmq.NET.ComponentTests\pgmq.NET.ComponentTests.csproj", "{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{5BF2124B-9895-4D6D-9E8B-8FE3BEE15BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BF2124B-9895-4D6D-9E8B-8FE3BEE15BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BF2124B-9895-4D6D-9E8B-8FE3BEE15BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
