@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pgmq.NET", "src\pgmq.NET.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pgmq.NET.ComponentTests", "test\pgmq.NET.ComponentTests\pgmq.NET.ComponentTests.csproj", "{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pgmq.NET.Service", "Examples\pgmq.NET.Service\pgmq.NET.Service.csproj", "{B6A80B57-3602-482D-9128-E5E741485C21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E67A78-2DB4-4E61-B9BE-C0B70FF91048}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A80B57-3602-482D-9128-E5E741485C21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A80B57-3602-482D-9128-E5E741485C21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A80B57-3602-482D-9128-E5E741485C21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A80B57-3602-482D-9128-E5E741485C21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
