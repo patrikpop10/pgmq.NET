@@ -30,7 +30,9 @@ public class QueueReader : IQueueReader
     }
     private static async Task<PGMQModel<T?>> Reader<T>(IQuery query)
     {
-        var result = await query.Execute(ParameterAdder.Simple);
+        await using NpgsqlConnection connection = new(CommandConsts.ConnectionString);
+        await connection.OpenAsync();
+        var result = await query.Execute(connection,ParameterAdder.Simple);
         while (result.Read())
         {
             return typeof(T) ==  typeof(string) ? result.MapToPGMQModelString<T?>() : result.MapToPGMQModel<T?>();
